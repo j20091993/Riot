@@ -12,3 +12,9 @@
 
 /js/*
   Cache-Control: public, max-age=604800
+
+/payment
+  X-Robots-Tag: noindex, nofollow
+
+/payment.html
+  X-Robots-Tag: noindex, nofollow

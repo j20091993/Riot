@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+User-agent: Bingbot
+Allow: /
+
 # Checkout is client-side only; excluded via noindex on payment page
 Disallow: /payment
 Disallow: /payment.html
