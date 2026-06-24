@@ -36,15 +36,15 @@ function handleBuy(e) {
     params.set('label', SERVICE_PRODUCTS[type].label);
   }
 
-  window.location.href = `payment.html?${params.toString()}`;
+  window.location.href = `/payment?${params.toString()}`;
 }
 
 const NAV_ITEMS = [
-  { href: 'index.html', label: 'Home', id: 'home' },
-  { href: 'products.html', label: 'Available Products', id: 'products' },
-  { href: 'reviews.html', label: 'Reviews', id: 'reviews' },
-  { href: 'faq.html', label: 'FAQ', id: 'faq' },
-  { href: 'reach-us.html', label: 'Reach Us', id: 'reach' },
+  { href: '/', label: 'Home', id: 'home' },
+  { href: '/products', label: 'Available Products', id: 'products' },
+  { href: '/reviews', label: 'Reviews', id: 'reviews' },
+  { href: '/faq', label: 'FAQ', id: 'faq' },
+  { href: '/reach-us', label: 'Reach Us', id: 'reach' },
 ];
 
 const PRODUCT_CATALOG = [
@@ -54,7 +54,7 @@ const PRODUCT_CATALOG = [
     price: 'From $9.99',
     description: 'Valorant Points bundles delivered as a gift card code to your email. Redeem in-game and start spending right away.',
     badge: 'Gift card delivery',
-    href: 'valorant-points.html',
+    href: '/valorant-points',
     cta: 'View Valorant Points',
     type: 'link',
   },
@@ -64,7 +64,7 @@ const PRODUCT_CATALOG = [
     price: 'Multiple regions',
     description: 'Full access accounts with the original email and lifetime warranty. Preview listings before you buy.',
     badge: 'Full access',
-    href: 'accounts.html',
+    href: '/accounts',
     cta: 'View Accounts',
     type: 'link',
   },
@@ -163,10 +163,10 @@ function getHeader(activePage = '') {
 
 function getPageCta(buttons = ['products'], message = 'Interested in buying? Click the buttons below.') {
   const config = {
-    products: { href: 'products.html', label: 'View Available Products', primary: true },
-    vp: { href: 'valorant-points.html', label: 'Shop Valorant Points', primary: true },
-    accounts: { href: 'accounts.html', label: 'Shop Accounts', primary: false },
-    reach: { href: 'reach-us.html', label: 'Reach Us', primary: true },
+    products: { href: '/products', label: 'View Available Products', primary: true },
+    vp: { href: '/valorant-points', label: 'Shop Valorant Points', primary: true },
+    accounts: { href: '/accounts', label: 'Shop Accounts', primary: false },
+    reach: { href: '/reach-us', label: 'Reach Us', primary: true },
   };
 
   const actions = buttons.map((key) => {
@@ -188,10 +188,10 @@ function getFooter() {
   return `
     <footer class="site-footer">
       <div class="footer-links-row">
-        <a href="products.html" class="footer-link">Available Products</a>
-        <a href="reviews.html" class="footer-link">Reviews</a>
-        <a href="faq.html" class="footer-link">FAQ</a>
-        <a href="reach-us.html" class="footer-link">Reach Us</a>
+        <a href="/products" class="footer-link">Available Products</a>
+        <a href="/reviews" class="footer-link">Reviews</a>
+        <a href="/faq" class="footer-link">FAQ</a>
+        <a href="/reach-us" class="footer-link">Reach Us</a>
       </div>
       <div class="footer-copy">
         <p>Riot Shop © 2026</p>
@@ -421,7 +421,7 @@ function getFeedbackPreview(limit = 6) {
         </div>
         <div class="reviews-grid">${reviews}</div>
         <div class="text-center mt-8">
-          <a href="reviews.html" class="link-arrow">
+          <a href="/reviews" class="link-arrow">
             View all reviews
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M9 5l7 7-7 7"/></svg>
           </a>

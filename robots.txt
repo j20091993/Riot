@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
 
-# Checkout is client-side only; excluded via noindex on payment.html
+# Checkout is client-side only; excluded via noindex on payment page
+Disallow: /payment
 Disallow: /payment.html
 
 Sitemap: https://riotshop.xyz/sitemap.xml

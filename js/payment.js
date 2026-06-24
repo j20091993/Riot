@@ -272,7 +272,7 @@ function renderCancelled(order) {
       <h2 class="payment-panel-title">Order cancelled</h2>
       <p class="payment-panel-sub">Your order was cancelled for submitting a maximum of ${MAX_CODE_ATTEMPTS} codes.</p>
       <p class="text-muted text-sm mt-2">Order ${order.orderId}</p>
-      <a href="index.html" class="btn-primary px-8 py-3 mt-8 inline-flex">Return home</a>
+      <a href="/" class="btn-primary px-8 py-3 mt-8 inline-flex">Return home</a>
     </div>
   `;
 }
@@ -282,7 +282,7 @@ function renderInvalidOrder() {
     <div class="payment-panel glass-card text-center">
       <h2 class="payment-panel-title">Invalid order</h2>
       <p class="payment-panel-sub">This checkout link is missing product details.</p>
-      <a href="index.html" class="btn-primary px-8 py-3 mt-6 inline-flex">Return home</a>
+      <a href="/" class="btn-primary px-8 py-3 mt-6 inline-flex">Return home</a>
     </div>
   `;
 }
