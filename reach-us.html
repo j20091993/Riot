@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <meta name="description" content="Need help with an order, a custom Valorant Points amount, or an account question? Send a message and get a response from support.">
+  <meta name="keywords" content="riot shop contact, valorant shop support, riot shop reach us, valorant order help, valorant points support, valorant account support, custom valorant points request, valorant refund request, riot shop customer service, valorant shop contact form, valorant shop help, riot shop support email, valorant order issue, valorant delivery help, gun buddy service support, unban service support, riot shop, valorant shop, riotshop.xyz, valorant shop customer support, contact valorant shop, valorant account question, valorant points custom amount">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Reach Us | Riot Shop">
+  <meta property="og:description" content="Order help, custom Valorant Points amounts, refund requests, and account questions — reach support through our contact form.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/logo.png">
+  <meta property="og:url" content="https://riotshop.xyz/reach-us.html">
+  <meta property="og:site_name" content="Riot Shop">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Reach Us | Riot Shop">
+  <meta name="twitter:description" content="Order help, custom VP amounts, and account support via contact form.">
+  <meta name="twitter:image" content="https://riotshop.xyz/assets/logo.png">
+  <link rel="canonical" href="https://riotshop.xyz/reach-us.html">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/logo.png">
+  <title>Reach Us | Riot Shop</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Reach Us",
+    "url": "https://riotshop.xyz/reach-us.html",
+    "description": "Contact support for order help, custom Valorant Points amounts, and account questions."
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { 'riot-dark': '#0a0608', 'riot-red': '#ff4655', 'riot-bg': '#0a0608' } } } };</script>
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body data-page="reach">
+
+  <div class="site-bg" aria-hidden="true">
+    <div class="site-bg-glow">
+      <div class="glow-orb glow-orb-1"></div>
+      <div class="glow-orb glow-orb-2"></div>
+      <div class="glow-orb glow-orb-3"></div>
+    </div>
+    <div class="site-bg-grid"></div>
+    <div class="site-bg-dots"></div>
+    <div class="site-bg-grain"></div>
+    <div class="site-bg-vignette"></div>
+    <div class="site-bg-bottom-fade"></div>
+  </div>
+
+  <div id="site-header"></div>
+
+  <main class="site-main">
+    <section class="hero-section page-hero page-enter">
+      <div class="hero-inner">
+        <div class="glass-pill page-hero-pill">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>Reach Us — Order Support</span>
+        </div>
+        <h1 class="hero-title"><span class="brand-text">Reach Us</span></h1>
+        <p class="hero-subtitle">Have a question about your order? Send us a message below.</p>
+      </div>
+    </section>
+
+    <section class="section-block" style="padding-top: 0;">
+      <div class="max-w-lg mx-auto px-4 sm:px-6">
+        <div class="glass-card content-box p-5 sm:p-8">
+          <div id="contact-form-panel" class="contact-form-panel">
+            <h2 class="text-xl font-bold text-heading mb-6 text-center">Send a Message</h2>
+            <div id="contact-error" class="hidden mb-4 p-3 rounded-lg border border-red-500/30 bg-red-500/10 text-red-200 text-sm" role="alert"></div>
+            <form id="reach-form" class="space-y-4" novalidate>
+              <div class="form-field" data-field="name">
+                <label class="form-label" for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Your name" autocomplete="name">
+                <p class="field-error" role="alert"></p>
+              </div>
+              <div class="form-field" data-field="email">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@email.com" autocomplete="email">
+                <p class="field-error" role="alert"></p>
+              </div>
+              <div class="form-field" data-field="subject">
+                <label class="form-label" for="subject">Subject</label>
+                <div class="custom-select" id="subject-select">
+                  <select id="subject" name="subject" class="custom-select-native" tabindex="-1" aria-hidden="true">
+                    <option value="">Select a subject</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="order">Order Issue</option>
+                    <option value="custom-vp">Custom Valorant Points Amount</option>
+                    <option value="account">Account Question</option>
+                    <option value="payment">Payment Help</option>
+                  </select>
+                  <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="custom-select-value is-placeholder">Select a subject</span>
+                    <svg class="custom-select-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <ul class="custom-select-menu" role="listbox"></ul>
+                </div>
+                <p class="field-error" role="alert"></p>
+              </div>
+              <div class="form-field" data-field="message">
+                <label class="form-label" for="message">Message</label>
+                <textarea id="message" name="message" class="form-input min-h-[120px] resize-y" placeholder="How can we help?"></textarea>
+                <p class="field-error" role="alert"></p>
+              </div>
+              <button type="submit" id="reach-submit" class="btn-primary w-full py-3.5">Send Message</button>
+            </form>
+          </div>
+          <div id="contact-loading" class="hidden text-center py-10" aria-live="polite" aria-busy="true">
+            <div class="form-spinner" aria-hidden="true"></div>
+            <p class="text-muted mt-4 text-sm">Sending your message...</p>
+          </div>
+          <div id="contact-success" class="hidden text-center py-8">
+            <div class="brand-icon-well w-14 h-14 flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-riot-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-heading">Message Sent</h3>
+            <p class="text-muted mt-2 text-sm">We will reply to the email you provided.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/shared.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
