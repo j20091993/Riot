@@ -412,6 +412,7 @@ function mountPaymentApp(order) {
     cryptoCoin: '',
     discountCode: '',
     discountApplied: false,
+    discountAutoTried: false,
     attempts: 0,
     showAltProviders: false,
     status: 'active',
@@ -450,9 +451,23 @@ function mountPaymentApp(order) {
     return renderStepPay(order, state, state.cryptoRates, state.cryptoRatesError);
   }
 
+  function maybeAutoApplyDiscount() {
+    if (state.discountAutoTried || state.discountApplied || state.step !== 1) return;
+
+    const pending = getPendingDiscountCode();
+    if (!state.discountCode && pending) {
+      state.discountCode = pending;
+    }
+    if (!state.discountCode) return;
+
+    state.discountAutoTried = true;
+    applyDiscountFromInput();
+  }
+
   function postRender() {
     bindEvents();
     initScrollReveal(root);
+    maybeAutoApplyDiscount();
 
     if (
       state.status === 'active'
@@ -774,12 +789,6 @@ function mountPaymentApp(order) {
   }
 
   render({ animate: false });
-
-  if (state.step === 1 && state.discountCode && !state.discountApplied) {
-    window.setTimeout(() => {
-      if (!state.discountApplied) applyDiscountFromInput();
-    }, 0);
-  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

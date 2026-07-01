@@ -588,32 +588,12 @@ function initSeo(page = '') {
   setMeta('name', 'keywords', getSeoKeywordsForPage(page));
 }
 
-function loadSiteScript(src, dataAttr, onReady) {
-  if (document.querySelector(`script[data-${dataAttr}]`)) {
-    if (typeof onReady === 'function') onReady();
-    return;
-  }
-
-  const script = document.createElement('script');
-  script.src = src;
-  script.dataset[dataAttr] = 'true';
-  script.onload = () => {
-    if (typeof onReady === 'function') onReady();
-  };
-  document.body.appendChild(script);
-}
-
 function loadSupportChat() {
-  const boot = () => {
+  try {
     if (typeof initSupportChat === 'function') initSupportChat();
-  };
-
-  if (typeof initSupportChat === 'function') {
-    boot();
-    return;
+  } catch (err) {
+    console.error('Support chat failed to load', err);
   }
-
-  loadSiteScript('/js/support-chat.js', 'support-chat', boot);
 }
 
 function loadDiscountPopup() {
@@ -623,16 +603,11 @@ function loadDiscountPopup() {
     return;
   }
 
-  const boot = () => {
+  try {
     if (typeof initDiscountPopup === 'function') initDiscountPopup();
-  };
-
-  if (typeof initDiscountPopup === 'function') {
-    boot();
-    return;
+  } catch (err) {
+    console.error('Discount popup failed to load', err);
   }
-
-  loadSiteScript('/js/discount-popup.js', 'discount-popup', boot);
 }
 
 function initLayout(activePage = '') {

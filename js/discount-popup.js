@@ -97,6 +97,7 @@ function bindPurchaseIntentListeners() {
 
 function initDiscountPopup() {
   if (document.getElementById('discount-popup-root')) return;
+  document.body.classList.remove('discount-popup-open');
   if (!shouldShowDiscountPopup()) return;
 
   document.body.insertAdjacentHTML('beforeend', getDiscountPopupHtml());
